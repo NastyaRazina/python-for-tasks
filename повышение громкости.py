@@ -12,8 +12,8 @@ def tweak_audio(frame, count):
 
 
 volume_adjustment = 100
-input_audio = wave.open("input_audio.wav", mode="rb")
-output_audio = wave.open("output_audio_adjusted.wav", mode="wb")
+input_audio = wave.open("in.wav", mode="rb")
+output_audio = wave.open("in.wav", mode="wb")
 output_audio.setparams(input_audio.getparams())
 
 num_frames = input_audio.getnframes()
