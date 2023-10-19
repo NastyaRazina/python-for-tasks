@@ -12,8 +12,8 @@ def lin(f1, f2, f1_label, f2_label, x_range=(-10, 10), num_points=100):
     ax.set_ylabel("y", fontsize=14)
     ax.grid(which="major", linewidth=1.2)
     ax.grid(which="minor", linestyle="--", color="gray", linewidth=0.5)
-    ax.plot(x, y1, c="red", label=func1_label)
-    ax.plot(x, y2, label=func2_label)
+    ax.plot(x, y1, c="red", label=f1_label)
+    ax.plot(x, y2, label=f2_label)
     ax.legend()
     ax.xaxis.set_minor_locator(plt.MultipleLocator(1))
     ax.yaxis.set_minor_locator(plt.MultipleLocator(1))
@@ -21,5 +21,8 @@ def lin(f1, f2, f1_label, f2_label, x_range=(-10, 10), num_points=100):
     ax.tick_params(which='minor', length=5, width=1)
 
     plt.show()
-
-lin()
+def lin1(x):
+    return 6*x+11
+def lin2(x):
+    return -6*x+8
+lin(lin1,lin2, '6x+11','-6x+8')
