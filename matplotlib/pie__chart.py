@@ -6,10 +6,10 @@ def pie_chart(n):
     for i in range(1, n + 1):
         labels.append("Часть " + str(i))
 
-    values = random.choices(range(1, 100), k=n)
-    plt.figure(figsize=(16, 12))
+    values = random.choices(range(1, 188), k=n)
+    plt.figure(figsize=(17, 23))
     plt.pie(values, labels=labels, autopct='%1.1f%%')
-    plt.title("Круговая диаграмма с " + str(n))
+    plt.title("Круговая диаграмма с " + str(n) + ' секторами')
     plt.show()
 
-pie_chart()
+pie_chart(8)
